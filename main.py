@@ -9,8 +9,10 @@ Program to interface with the Neuron.py class and allow simple configuration and
 from neuron import *
 
 file  = open("neuron.txt",'w')
-steps = 100000  #Total Time(Ms)
-skip  = 10000   #Time to Skip
+
+steps = 100000 #Total Time(Ms)
+skip  = 10000  #Time to Skip(Ms)
+
 
 #Creating Neuron Objects
 N1 = Neuron("Neuron 1")
@@ -31,7 +33,7 @@ N2.gsr = 0.40
 N3.gsr = 0.38
 
 #Setting Neuron Inputs and correlation strength
-N2.Input([[N1,0.00035]])
+N2.Input([[N1,0.0035]])
 N3.Input([[N2,0.003]])
 
 #Run the simulation and output data 
